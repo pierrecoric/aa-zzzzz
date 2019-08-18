@@ -27,7 +27,7 @@ def timeout_handler(signum, frame):
     raise TimeoutException
 signal.signal(signal.SIGALRM, timeout_handler)
 
-#This code is based on the code of genekogan https://gist.github.com/genekogan/ebd77196e4bf0705db51f86431099e57
+#This code is based on a code of genekogan https://gist.github.com/genekogan/ebd77196e4bf0705db51f86431099e57
 def get_soup(url,header):
     return BeautifulSoup(urllib2.urlopen(urllib2.Request(url,headers=header)),"html.parser")
 
